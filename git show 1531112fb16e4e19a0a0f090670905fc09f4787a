@@ -1,0 +1,66 @@
+[33mcommit a0ca6d33bc67a72a1563ced72c679d5e0fcacc56[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:52:02 2022 +0200
+
+    create incron_config file
+
+[33mcommit 55e30256912ea2f85e01dab7b50cb8937f6c69cf[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:49:49 2022 +0200
+
+    backup script
+
+[33mcommit 1531112fb16e4e19a0a0f090670905fc09f4787a[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:43:04 2022 +0200
+
+    locale settings change
+
+[33mcommit 0978884eb173ed6a0f20176c1a44a9343767b286[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:32:03 2022 +0200
+
+    end ssh
+
+[33mcommit 0ca3315db4930fc4adcd0a457c6662ac328dc578[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:23:37 2022 +0200
+
+    addUser
+
+[33mcommit e065f89a6f53329cb547537362fc57087125ddac[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:15:10 2022 +0200
+
+    push
+
+[33mcommit 4b2736ea4710dc09fae2370317a499b1686db5b0[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Thu Oct 6 14:10:26 2022 +0200
+
+    Revert "install nano"
+    This reverts commit e6e6b696b22ae5eb17c9d4681f4aeb9e5d5775a8.
+
+[33mcommit e6e6b696b22ae5eb17c9d4681f4aeb9e5d5775a8[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Wed Oct 5 12:33:54 2022 +0200
+
+    install nano
+
+[33mcommit 845c209de2c59d2345eced25d178d5a748a0266b[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Wed Oct 5 12:26:04 2022 +0200
+
+    sshd_config commit important
+
+[33mcommit 21c5c08137f647bfe7b12fecc07e08f8a192e93b[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Wed Oct 5 12:07:32 2022 +0200
+
+    gitignore
+
+[33mcommit 45f003f53c29ff70354299b33e1a93863076358c[m
+Author: root <root@emile-hermans.uclllabs.be>
+Date:   Wed Oct 5 11:30:59 2022 +0200
+
+    initial commit
