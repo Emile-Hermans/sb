@@ -1,4 +1,4 @@
-# /etc/hosts.allow: list of hosts that are allowed to access the system.
+172.31.128.1# /etc/hosts.allow: list of hosts that are allowed to access the system.
 #                   See the manual pages hosts_access(5) and hosts_options(5).
 #
 # Example:    ALL: LOCAL @some_netgroup
@@ -7,4 +7,5 @@
 # If you're going to protect the portmapper use the name "rpcbind" for the
 # daemon name. See rpcbind(8) and rpc.mountd(8) for further information.
 #
+sshd:193.191.187.4, 172.31.128.1, 2001:6a8:2880:a021::6
 
