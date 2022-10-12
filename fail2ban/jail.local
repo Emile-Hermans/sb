@@ -3,3 +3,4 @@
 bantime = 300
 #Decrease the number of failed login attempts before banning to 5
 maxretry=5
+findtime = 2m
