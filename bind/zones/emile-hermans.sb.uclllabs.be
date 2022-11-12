@@ -19,6 +19,5 @@ test	IN	A	193.191.177.254
 
 ; name servers NS records
 @	IN	NS	ns.emile-hermans.sb.uclllabs.be.
-@	IN 	NS	ns1.uclllabs.be
-@	IN	NS	ns2.uclllabs.be
-
+@	IN 	NS	ns1.uclllabs.be.
+@	IN	NS	ns2.uclllabs.be.
