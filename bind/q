@@ -1,0 +1,10 @@
+;
+;
+;
+@       IN      SOA     emile-hermans.sb.uclllabs.be. emile\.hermans.student.ucll.be
+                                30      ; Serial
+                                80      ; Refresh
+                                80      ; Retry
+                                8000    ; Expire
+                                80      ; Negative Cache TTL
+
