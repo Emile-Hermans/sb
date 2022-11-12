@@ -4,7 +4,7 @@
 
 zone "ns.slimme-rik.sb.uclllabs.be" {
     type master;
-    file "/etc/bind/db.thegeekstuff.net";
+    file "/etc/bind/zones/forward.uclllabs.be"
 };
 zone "0.42.10.in-addr.arpa" {
         type master;
