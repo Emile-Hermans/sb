@@ -5,6 +5,7 @@
 zone "emile-hermans.sb.uclllabs.be" {
     type master;
     file "/etc/bind/zones/emile-hermans.sb.uclllabs.be";
+    allow-transfer {193.191.176.254; 193.191.177.4;}
 };
 
 // Consider adding the 1918 zones here, if they are not used in your
