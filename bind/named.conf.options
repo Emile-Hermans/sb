@@ -1,5 +1,18 @@
 options {
 	directory "/var/cache/bind";
+	// listen port and address
+    	listen-on port 53 { localhost; 172.16.1.10; };
+
+    	// for public DNS server - allow from any
+    	allow-query { any; };
+
+    	// define the forwarder for DNS queries
+    	forwarders { 1.1.1.1; };
+
+    	// enable recursion that provides recursive query
+    	recursion yes;
+
+
 
 	// If there is a firewall between you and nameservers you want
 	// to talk to, you may need to fix the firewall to allow multiple
@@ -22,11 +35,5 @@ options {
 	dnssec-validation auto;
 
 	listen-on-v6 { any; };
-	resursion yes;
-        listen-on {193.191.177.152;};
-        allow-transfer {none;};
-
-        forwarders {
-        193.191.177.152;
-        };
+	
 };
