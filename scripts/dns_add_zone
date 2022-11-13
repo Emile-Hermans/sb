@@ -1,0 +1,64 @@
+#Usage example:
+# ./dns_add_zone zone1 192.168.1.40
+#------------------------------------
+DOMAIN="$1"
+IPADDR="$2"
+
+#missing parameter
+if [ $# -le 1]
+then 
+	echo "Syntax error, Example: ./dns_add_zone ZONE_NAME IP_ADDR"
+	echo "Example: zone1 192.168.1.40"
+	exit 1
+fi
+
+#CREATE RANDOM SERIAL_NUM BY DATE
+SERIAL=$(date + "%Y%m%d")01
+
+#LOAD PROFILE
+source "ns.emile-hermans.sb.uclllabs.be"
+
+#set default ns1
+NS1=${NEMESERVERS[0]}
+
+########START SOA########
+echo "\$ORIGIN ${DOMAIN}." >/tmp/$1.db
+echo "\$TTL ${TTL}" >>/tmp/$1.db
+echo "@	IN	SOA	${NS1} ${EMAILID} (" >>/tmp/$1.db
+echo "			${SERIAL}	; SERIAL" >>/tmp/$1.db
+echo "			${REFRESH}	; REFRESH" >>/tmp/$1.db
+echo "			${RETRY}	; RETRY" >>/tmp/$1.db
+echo "			${EXPIRE}	; EXPIRE" >>/tmp/$1.db
+echo "			${MAXNEGATIVE})	; Minimum negative" >>/tmp/$1.db
+echo "" >>/tmp/$1.db
+
+########START NAME SERVERS######
+#GET LENGTH OF AN ARRAY
+tLen=${#NAMESERVERS[@]}
+
+# LOOP FOR READING ALL NAMESERVERS
+echo "; NAME SERVERS FOR $DOMAIN" >>/tmp/$1.db
+for (( i=0; i<${tLen}; i++));
+do 
+	echo "@		${ATTL}	IN	NS	${NAMESERVERS[$i]}" >>/tmp/$1.db
+
+####### START A RECORDS ##########
+echo "; A RECORDS" >>/tmp/$1.db
+echo "@				${ATTL}	IN	A	${IPADDR}" >>/tmp/$1.db
+
+#GET LENGTH OF IP ARRAY
+ttLen=${NAMESERVERSIP[@]
+
+#Check if nameserver and IP match
+if[$tLen -eq $ttLen]
+then
+#LOOP
+for ((i=0;1<${ttLen}; i++ ));
+do
+	thisNS="$(echo ${NAMESERVERS[$i]} |cut -d'.' -f1)"
+	echo "${thisNS}		${ATTL}	IN	A	${NAMESERVERSIP[$i]}" >>/tmp/$1.db
+done
+else
+:
+fi
+
