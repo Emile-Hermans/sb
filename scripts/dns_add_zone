@@ -1,77 +1,59 @@
 #Usage example:
-# ./dns_add_zone zone1 192.168.1.40
-#------------------------------------
-DOMAIN="$1"
-IPADDR="$2"
+# ./dns_add_zone zone1 
+#------------------------
+SUBZONE="$1"
+DOMAIN=emile-hermans.sb.uclllabs.be
+IPADDR=193.191.177.152
+CONFFILE=named.conf.mrt-zones
+DIRCONF=/etc/bind
 
-#missing parameter
-if [ $# -le 1 ]
-then 
-	echo "Syntax error, Example: ./dns_add_zone ZONE_NAME IP_ADDR"
-	echo "Example: zone1 192.168.1.40"
-	exit 1
-fi
-
-#CREATE RANDOM SERIAL_NUM BY DATE
+#SERIAL
 SERIAL=100
 
-#LOAD PROFILE
-source "/etc/bind/zones/ns.emile-hermans.sb.uclllabs.be"
+######## CHECK IF FILE EXISTS ########
+if [[ ! -f "${DIRCONF}/${CONFFILE}" ]]
+	then
+		echo "Creating conffile."
+		cd $DIRCONF && vi $CONFFILE
+		echo 'include "${DIRCONF}/${CONFFILE}";' >> named.conf.local
+	else
+		echo "Entering path ${DIRCONF}/${CONFFILE}"
+		cd $DIRCONF
+	fi
 
-#set default ns1
-NS1=${NEMESERVERS[0]}
-
-########START SOA########
-echo "\$ORIGIN ${DOMAIN}." >/tmp/$1.db
-echo "\$TTL	4h" >>/tmp/$1.db
-echo "@	IN	SOA	ns.emile-hermans.sb.uclllabs.be root.emile-hermans.sb.uclllabs.be (" >>/tmp/$1.db
-echo "			${SERIAL}	; SERIAL" >>/tmp/$1.db
-echo "			3h		; REFRESH" >>/tmp/$1.db
-echo "			1h		; RETRY" >>/tmp/$1.db
-echo "			1w		; EXPIRE" >>/tmp/$1.db
-echo "			2h	)	; Minimum negative" >>/tmp/$1.db
-echo "" >>/tmp/$1.db
-
-########START NAME SERVERS######
-#GET LENGTH OF AN ARRAY
-tLen=${#NAMESERVERS[@]}
-
-# LOOP FOR READING ALL NAMESERVERS
-echo "; NAME SERVERS FOR $DOMAIN" >>/tmp/$1.db
-for (( i=0; i<${tLen}; i++));
-do 
-	echo "@		7200	IN	NS	${NAMESERVERS[$i]}" >>/tmp/$1.db
-
-####### START A RECORDS ##########
-echo "; A RECORDS" >>/tmp/$1.db
-echo "@				7200	IN	A	${IPADDR}" >>/tmp/$1.db
-
-#GET LENGTH OF IP ARRAY
-ttLen=${NAMESERVERSIP[@]}
-
-#Check if nameserver and IP match
-if [ $tLen -eq $ttLen ] 
+#missing parameter
+if [[ -z "${SUBZONE}" ]]
 then
-#LOOP
-for ((i=0;1<${ttLen}; i++ ));
-do
-	thisNS="$(echo ${NAMESERVERS[$i]} |cut -d'.' -f1)"
-	echo "${thisNS}		7200	IN	A	${NAMESERVERSIP[$i]}" >>/tmp/$1.db
-done
-else
-:
+        echo "Syntax error, Example: ./dns_add_zone ZONE_NAME"
+        echo "Example: zone1"
+        exit 1
 fi
 
-cat /tmp/$1.db
+#CREATE DNS-ZONE
+cat << EOF >> $CONFFILE
+zone "${SUBZONE}.${DOMAIN}" {
+	type master;
+	file "${DIRCONF}/db.${SUBZONE}.${DOMAIN}";
+};
+EOF
 
-read -p "Do you wish to go ahead?" yn
-case $YN in
-	[Yy]* )
-		echo "Copying to /var/named/$1.db" ;
-		cp /tmp/$1.db /var/named/$1.db;
-		echo "" >> /etc/bind/named.conf.local;
-		echo "zone \"$1\" {" >> /etc/named.conf.local;
-		echo "	type master;" >> /etc/named.conf.local;
-		echo "	file \"/var/named/$1.db\";" >> /etc/named.conf.local;
-		
 
+echo "Zonefile configuaration to ${CONFFILE} complete"
+
+
+
+######## START SOA ##########
+#
+echo "Create zone-file"
+
+echo "\$TTL	4h" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo '@	IN	SOA	'"ns${SUBDOMAIN}.${DOMAIN}. root${SUBDOMAIN}.${DOMAIN}"' (' >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			${SERIAL}	; SERIAL" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			3h		; REFRESH" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			1h		; RETRY" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			1w		; EXPIRE" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo '			2h	)	; Minimum negative' >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+
+echo "Zone file created"
+systemctl restart bind9
