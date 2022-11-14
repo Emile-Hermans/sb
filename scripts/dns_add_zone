@@ -6,6 +6,7 @@ DOMAIN=emile-hermans.sb.uclllabs.be
 IPADDR=193.191.177.152
 CONFFILE=named.conf.mrt-zones
 DIRCONF=/etc/bind
+DIRZONE=/etc/bind/zones
 
 #SERIAL
 SERIAL=100
@@ -33,7 +34,7 @@ fi
 cat << EOF >> $CONFFILE
 zone "${SUBZONE}.${DOMAIN}" {
 	type master;
-	file "${DIRCONF}/db.${SUBZONE}.${DOMAIN}";
+	file "${DIRZONE}/db.${SUBZONE}.${DOMAIN}";
 };
 EOF
 
@@ -47,13 +48,20 @@ echo "Zonefile configuaration to ${CONFFILE} complete"
 echo "Create zone-file"
 
 echo "\$TTL	4h" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo '@	IN	SOA	'"ns${SUBDOMAIN}.${DOMAIN}. root${SUBDOMAIN}.${DOMAIN}"' (' >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo "			${SERIAL}	; SERIAL" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo "			3h		; REFRESH" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo "			1h		; RETRY" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo "			1w		; EXPIRE" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo '			2h	)	; Minimum negative' >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
-echo "" >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo '@	IN	SOA	'"ns.${SUBZONE}.${DOMAIN}. root.${SUBZONE}.${DOMAIN}"' (' >>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			${SERIAL}	; SERIAL" 		>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			3h		; REFRESH" 		>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			1h		; RETRY" 		>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "			1w		; EXPIRE" 		>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo '			2h	)	; Minimum negative' 	>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo ""								>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "@		IN      NS      ns.${SUBZONE}.${DOMAIN}."	>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "@		IN      NS      ns.${DOMAIN}." 			>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "ns		IN      A       ${IPADDR}" 		>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "@		IN      A       ${IPADDR}" 			>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
+echo "" 							>>/etc/bind/zones/db.$SUBZONE.$DOMAIN
 
 echo "Zone file created"
+
+rndc reload
 systemctl restart bind9
