@@ -3,7 +3,7 @@
 ;
 $TTL    300
 @       IN      SOA     ns.emile-hermans.sb.uclllabs.be. root.emile-hermans.sb.uclllabs.be. (
-                             536	 ; Serial
+                             551	 ; Serial
                              300         ; Refresh
                              300         ; Retry
                              300         ; Expire
@@ -49,3 +49,13 @@ subzonejuom5j	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 subzoneshee9o	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 subzonerie3yo	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 subzonequia7l	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+subzoneox2ohz	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+subzoneiw4uuc	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+subzoneuab5am	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+www1   IN      A       193.191.177.152
+;Name Server Records
+www1   IN      A       193.191.177.152
+subzoneephie3	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+test   IN      A       193.191.177.152

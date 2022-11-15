@@ -98,3 +98,23 @@ zone "subzonequia7l.emile-hermans.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/db.subzonequia7l.emile-hermans.sb.uclllabs.be";
 };
+zone "subzoneox2ohz.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneox2ohz.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneiw4uuc.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneiw4uuc.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonejah8pe.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonejah8pe.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneuab5am.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneuab5am.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneephie3.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneephie3.emile-hermans.sb.uclllabs.be";
+};

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+SUBDOMAIN=$1
+
+DOMAIN="${SUBDOMAIN}.conf"
+
+#create A record in dns server
+dns_add_record -t B $SUBDOMAIN 193.191.177.152 $SUBDOMAIN
+
+mkdir /var/www/$SUBDOMAIN
+
+
+#Make HTML FILE
+
+echo "<!DOCTYPE html>"						>>/var/www/$SUBDOMAIN/index.html
+echo "<html>"							>>/var/www/$SUBDOMAIN/index.html
+echo "<body>"							>>/var/www/$SUBDOMAIN/index.html
+			
+echo "<h1>${SUBDOMAIN}</h1>"					>>/var/www/$SUBDOMAIN/index.html
+
+echo "</body>"							>>/var/www/$SUBDOMAIN/index.html
+echo "</html>"							>>/var/www/$SUBDOMAIN/index.html
+#Create virtual host
+echo "<virtualHost *:80>"					>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+echo "ServerName ${SUBDOMAIN}.emile-hermans.sb.uclllabs.be"	>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+echo "ServerAlias ${SUBDOMAIN}.emile-hermans.sb.uclllabs.be"	>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+echo "DocumentRoot /var/www/${SUBDOMAIN}/"			>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+
+echo "ErrorLog ${APACHE_LOG_DIR}/error.log"			>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+echo "CustomLog ${APACHE_LOG_DIR}/access.log combined"		>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+echo "</virtualhost>"						>>/etc/apache2/sites-available/$SUBDOMAIN.conf
+
+#Enable new vhost
+a2ensite $DOMAIN
+
+
+apache2ctl configtest
+systemctl restart apache2
+systemctl status apache2
