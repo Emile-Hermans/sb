@@ -3,7 +3,7 @@
 ;
 $TTL    300
 @       IN      SOA     ns.emile-hermans.sb.uclllabs.be. root.emile-hermans.sb.uclllabs.be. (
-                             551	 ; Serial
+                             601	 ; Serial
                              300         ; Refresh
                              300         ; Retry
                              300         ; Expire
@@ -58,4 +58,65 @@ www1   IN      A       193.191.177.152
 www1   IN      A       193.191.177.152
 subzoneephie3	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 ;Name Server Records
-test   IN      A       193.191.177.152
+www2   IN      A       193.191.177.152
+subzoneaisoh5	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+www   IN      A       193.191.177.152
+;Name Server Records
+subzonechufo0	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+heyhoi   IN      A       193.191.177.152
+;Name Server Records
+raar   IN      A       193.191.177.152
+;Name Server Records
+wtf   IN      A       193.191.177.152
+subzoneeefee2	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+pls   IN      A       193.191.177.152
+subzoneop5om2	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+laatste.test   IN      A       193.191.177.152
+subzoneciu5ae	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+shen1i.subzoneciu5ae   IN      A       193.191.177.152
+;Name Server Records
+check.2   IN      A       193.191.177.152
+subzoneaich7p	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ais9du.subzoneaich7p   IN      A       193.191.177.152
+subzonethoo1o	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+jeiza4.subzonethoo1o   IN      A       193.191.177.152
+subzonewuos5i	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+aeji2o.subzonewuos5i   IN      A       193.191.177.152
+subzonehaiw4v	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+xei5da.subzonehaiw4v   IN      A       193.191.177.152
+subzonemahnu9	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ji6sae.subzonemahnu9   IN      A       193.191.177.152
+subzoneshoo3s	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+hue5ah.subzoneshoo3s   IN      A       193.191.177.152
+subzoneuyohb7	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+phae5i.subzoneuyohb7   IN      A       193.191.177.152
+subzoneoogh4f	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ainu0u.subzoneoogh4f   IN      A       193.191.177.152
+subzoneeit7ta	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ahfae6.subzoneeit7ta   IN      A       193.191.177.152
+subzoneuhie5p	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+quie6k.subzoneuhie5p   IN      A       193.191.177.152
+subzonequo1oa	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ieyit6.subzonequo1oa   IN      A       193.191.177.152
+subzonelo9iod	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+oow6ae.subzonelo9iod   IN      A       193.191.177.152
+subzoneeir6ai	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+ahx8io.subzoneeir6ai   IN      A       193.191.177.152

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SUBDOMAIN=$1
+
+DOMAIN="${SUBDOMAIN}.conf"
+
+#echo $SUBDOMAIN | grep -o '[^.]*'
+
+#string="$( cut -d '.' -f 1 <<< "$s" )"; echo "$string"
+NAME=echo"$( ${SUBDOMAIN} | grep -Po '.*(?=.emile-hermans.sb.uclllabs.be)'"
+echo "${NAME}
