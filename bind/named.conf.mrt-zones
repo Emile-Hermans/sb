@@ -190,3 +190,11 @@ zone "subzoneeir6ai.emile-hermans.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/db.subzoneeir6ai.emile-hermans.sb.uclllabs.be";
 };
+zone "subzoneoodei9.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneoodei9.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneeeyuk4.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneeeyuk4.emile-hermans.sb.uclllabs.be";
+};

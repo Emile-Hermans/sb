@@ -23,6 +23,10 @@
 ### tuple ### allow udp 123 0.0.0.0/0 any 0.0.0.0/0 in
 -A ufw-user-input -p udp --dport 123 -j ACCEPT
 
+### tuple ### allow any 443 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 443 -j ACCEPT
+-A ufw-user-input -p udp --dport 443 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###
