@@ -198,3 +198,79 @@ zone "subzoneeeyuk4.emile-hermans.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/db.subzoneeeyuk4.emile-hermans.sb.uclllabs.be";
 };
+zone "subzonetu6bo3.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonetu6bo3.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonenoo5fe.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonenoo5fe.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneque8oh.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneque8oh.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonejif4ee.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonejif4ee.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneou7eed.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneou7eed.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonepaena6.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonepaena6.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonerecoa2.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonerecoa2.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneisae7u.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneisae7u.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonexou4we.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonexou4we.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonewati3a.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonewati3a.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneiesh2u.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneiesh2u.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneco0lee.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneco0lee.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonezie8su.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonezie8su.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneyoow0u.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneyoow0u.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneaez2ij.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneaez2ij.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneohng3z.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneohng3z.emile-hermans.sb.uclllabs.be";
+};
+zone "subzonethoos3.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonethoos3.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneeib4zo.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneeib4zo.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneog2ooc.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneog2ooc.emile-hermans.sb.uclllabs.be";
+};

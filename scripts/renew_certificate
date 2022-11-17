@@ -1,0 +1,4 @@
+#!/bin/bash
+certbot --staging -d "emile-hermans.sb.uclllabs.be" --force-renewal
+
+

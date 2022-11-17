@@ -2,6 +2,7 @@
 <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.0//EN"
   "file:///usr/share/xml/schema/xml-core/catalog.dtd">
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<delegatePublic publicIdStartString="+//IDN docutils.sourceforge.net/" catalog="file:///etc/xml/docutils-common.xml"/>
 <delegatePublic publicIdStartString="+//IDN faq.org//DTD Frequently Asked Questions" catalog="file:///etc/xml/sgml-data.xml"/>
 <delegatePublic publicIdStartString="+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN" catalog="file:///etc/xml/sgml-data.xml"/>
 <delegatePublic publicIdStartString="-//GlobalTransCorp//DTD XML Catalogs V1.0-Based Extension V1.0//EN" catalog="file:///etc/xml/xml-core.xml"/>
@@ -16,6 +17,7 @@
 <delegatePublic publicIdStartString="-//OASIS//DTD XML Catalogs V1.0//EN" catalog="file:///etc/xml/xml-core.xml"/>
 <delegatePublic publicIdStartString="-//OASIS//DTD XML Exchange Table Model 19990315" catalog="file:///etc/xml/docbook-xml.xml"/>
 <delegatePublic publicIdStartString="-//OASIS//ELEMENTS DocBook" catalog="file:///etc/xml/docbook-xml.xml"/>
+<delegatePublic publicIdStartString="-//OASIS//ENTITIES DocBook" catalog="file:///etc/xml/docbook-xml.xml"/>
 <delegatePublic publicIdStartString="-//W3C//DTD SVG" catalog="file:///etc/xml/sgml-data.xml"/>
 <delegatePublic publicIdStartString="ISO 8879:1986//ENTITIES" catalog="file:///etc/xml/sgml-data.xml"/>
 <delegateSystem systemIdStartString="/usr/share/sgml/dtd/qaml-xml.dtd" catalog="file:///etc/xml/sgml-data.xml"/>
