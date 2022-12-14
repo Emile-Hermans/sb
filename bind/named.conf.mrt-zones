@@ -274,3 +274,11 @@ zone "subzoneog2ooc.emile-hermans.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/db.subzoneog2ooc.emile-hermans.sb.uclllabs.be";
 };
+zone "subzoneochut3.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneochut3.emile-hermans.sb.uclllabs.be";
+};
+zone "subzoneeem0nu.emile-hermans.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzoneeem0nu.emile-hermans.sb.uclllabs.be";
+};

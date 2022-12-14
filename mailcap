@@ -78,6 +78,23 @@ image/x-xwindowdump; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLA
 image/x-icon; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
 image/yuv; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
 text/plain; gedit %s; test=test -n "$DISPLAY"
+application/vnd.tcpdump.pcap; wireshark %s; test=test -n "$DISPLAY"
+application/x-pcapng; wireshark %s; test=test -n "$DISPLAY"
+application/x-snoop; wireshark %s; test=test -n "$DISPLAY"
+application/x-iptrace; wireshark %s; test=test -n "$DISPLAY"
+application/x-lanalyzer; wireshark %s; test=test -n "$DISPLAY"
+application/x-nettl; wireshark %s; test=test -n "$DISPLAY"
+application/x-radcom; wireshark %s; test=test -n "$DISPLAY"
+application/x-etherpeek; wireshark %s; test=test -n "$DISPLAY"
+application/x-visualnetworks; wireshark %s; test=test -n "$DISPLAY"
+application/x-netinstobserver; wireshark %s; test=test -n "$DISPLAY"
+application/x-5view; wireshark %s; test=test -n "$DISPLAY"
+application/x-tektronix-rf5; wireshark %s; test=test -n "$DISPLAY"
+application/x-micropross-mplog; wireshark %s; test=test -n "$DISPLAY"
+application/x-apple-packetlogger; wireshark %s; test=test -n "$DISPLAY"
+application/x-endace-erf; wireshark %s; test=test -n "$DISPLAY"
+application/ipfix; wireshark %s; test=test -n "$DISPLAY"
+application/x-ixia-vwr; wireshark %s; test=test -n "$DISPLAY"
 x-scheme-handler/snap; /usr/bin/snap handle-link %s; test=test -n "$DISPLAY"
 text/english; vim %s; needsterminal
 text/plain; vim %s; needsterminal
@@ -99,6 +116,7 @@ x-scheme-handler/help; yelp %s; test=test -n "$DISPLAY"
 x-scheme-handler/info; yelp %s; test=test -n "$DISPLAY"
 x-scheme-handler/man; yelp %s; test=test -n "$DISPLAY"
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; nametemplate=%s.html
 text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
 image/avs; display-im6.q16. 'avs:%s'; test=test -n "$DISPLAY"
 image/bie; display-im6.q16 'jbig:%s'; test=test -n "$DISPLAY"
@@ -142,6 +160,7 @@ image/x-xpixmap; display-im6.q16 'xpm:%s'; test=test -n "$DISPLAY"
 image/x-xwindowdump; display-im6.q16 'xwd:%s'; test=test -n "$DISPLAY"
 image/x-icon; display-im6.q16 'icon:%s'; test=test -n "$DISPLAY"
 image/yuv; display-im6.q16 'yuv:%s'; test=test -n "$DISPLAY"
+text/html; /usr/bin/lynx -dump -force_html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
 application/x-troff-man; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page
 text/troff; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page
 text/*; less %s; needsterminal
