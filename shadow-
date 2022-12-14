@@ -30,3 +30,4 @@ check:$y$j9T$I8Oy2Gn6gsbk7KoE5iUaA0$WYqQ7/vbqi6XptiR933.rRK7c1bZjYd1L.U.Dgja/k2:
 ntp:*:19292:0:99999:7:::
 bind:*:19296:0:99999:7:::
 rtkit:*:19306:0:99999:7:::
+ftp:*:19340:0:99999:7:::
