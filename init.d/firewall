@@ -1,46 +1,48 @@
 #!/bin/bash
 
-# This script allows or denies incoming traffic on TCP port 25
-# using the iptables command.
-
 # Start the firewall
 start_firewall() {
   # Allow incoming traffic on TCP port 25
-  iptables -A INPUT -p tcp --dport 25 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 443 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 587 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 993 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 22345 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 25 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 587 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 993 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 22345 -j ACCEPT
 
-  iptables -A INPUT -p tcp --dport 53 -j ACCEPT
-  iptables -A INPUT -p udp --dport 53 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 53 -j ACCEPT
+    iptables -A INPUT -p udp --dport 53 -j ACCEPT
 
-# Permit by ip 
-  iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
-  iptables -A INPUT -s 192.168.255.0/24 -j ACCEPT
-  iptables -A INPUT -s 172.16.0.0/16 -j ACCEPT
-# Allow icmp ping resuest	
-  iptables -A INPUT -p icmp -j ACCEPT
+  # Permit by ip 
+    iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+    iptables -A INPUT -s 192.168.255.0/24 -j ACCEPT
+    iptables -A INPUT -s 172.16.0.0/16 -j ACCEPT
+
+  # Allow mrt and leia
+    iptables -A INPUT -s mrt.uclllabs.be -j ACCEPT
+    iptables -A INPUT -s leia.uclllabs.be -j ACCEPT
+  # Allow icmp ping resuest	
+    iptables -A INPUT -p icmp -j ACCEPT
+
+  # Drop all other traffic
+    iptables -A INPUT -j DROP
+
+  # Disable ip routing
+    iptables -I FORWARD -j DROP
 }
 
 # Stop the firewall
 stop_firewall() {
-  # Deny incoming traffic on TCP port 25
-  iptables -A INPUT -p tcp --dport 25 -j DROP
-  iptables -A INPUT -p tcp --dport 80 -j DROP
-  iptables -A INPUT -p tcp --dport 443 -j DROP
-  iptables -A INPUT -p tcp --dport 587 -j DROP
-  iptables -A INPUT -p tcp --dport 993 -j DROP
-  iptables -A INPUT -p tcp --dport 22345 -j DROP
+  # Flush/clear all rules
+    iptables -F
 }
 
-# Check if the firewall is running
+# Restart firewall
 restart_firewall() {
   # Stop firewall
-  stop_firewall()
+    stop_firewall()
   # Start firewall
-  start_firewall()
+    start_firewall()
 }
 
 # Handle command line arguments
@@ -55,7 +57,7 @@ case "$1" in
     restart_firewall
     ;;
   *)
-    echo "Usage: firewall {start|stop|status}"
+    echo "Usage: firewall {start|stop|restart}"
     exit 1
     ;;
 esac
