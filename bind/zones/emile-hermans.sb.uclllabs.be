@@ -3,7 +3,7 @@
 ;
 $TTL    300
 @       IN      SOA     ns.emile-hermans.sb.uclllabs.be. root.emile-hermans.sb.uclllabs.be. (
-                             642	 ; Serial
+                             90004	 ; Serial
                              300         ; Refresh
                              300         ; Retry
                              300         ; Expire
@@ -22,6 +22,9 @@ ns      IN      A       193.191.177.152
 test    IN      A       193.191.177.254
 ns1	IN	A	139.191.177.254
 ns2	IN	A	193.191.177.4
+
+@	IN	AAAA	2001:6a8:2880:a077::98
+ns	IN	AAAA	2001:6a8:2880:a077::98
 
 testttt	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 werkt	IN	NS	ns.emile-hermans.sb.uclllabs.be.
@@ -176,3 +179,95 @@ subzoneog2ooc	IN	NS	ns.emile-hermans.sb.uclllabs.be.
 ais1yu.subzoneog2ooc   IN      A       193.191.177.152
 ;Name Server Records
 ais1yu.subzoneog2ooc   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+;Name Server Records
+johsh3.subzoneutoo1e   IN      A       193.191.177.152
+subzoneochut3	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+shoo1t.subzoneochut3   IN      A       193.191.177.152
+subzoneeem0nu	IN	NS	ns.emile-hermans.sb.uclllabs.be.
+;Name Server Records
+meifa1.subzoneeem0nu   IN      A       193.191.177.152
